@@ -15,3 +15,16 @@ function solution(n, m){
     }
     return counter;
 }
+
+//Detect Pangram problem:
+//https://www.codewars.com/kata/545cedaa9943f7fe7b000048/
+//Solution:
+
+function isPangram(str){
+  let alphabet = new Set("abcdefghijklmnopqrstuvwxyz")
+    for (let char of str.toLowerCase()){
+        alphabet.delete(char)
+        if (alphabet.size == 0) return true
+    }
+    return false
+}
