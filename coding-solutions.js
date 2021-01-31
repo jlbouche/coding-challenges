@@ -28,3 +28,22 @@ function isPangram(str){
     }
     return false
 }
+
+//Sum of two lowest positive integers (guaranteed only positive integers)
+//https://www.codewars.com/kata/558fc85d8fd1938afb000014/
+//Solution:
+
+function sumTwoSmallestNumbers(numbers){
+  let sortNum = numbers.sort(function(a,b){return a-b})
+  let smallestNum = sortNum.slice(0, 2)
+  let sum = smallestNum.reduce(function(a, b){return a + b})
+  return sum
+}
+
+//Regex Validate PIN Code
+//https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
+//Solution:
+function validatePIN(pin){
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
+
