@@ -47,3 +47,15 @@ function validatePIN(pin){
   return /^(\d{4}|\d{6})$/.test(pin)
 }
 
+//Square Every Digit
+//https://www.codewars.com/kata/546e2562b03326a88e000020/
+//Solution:
+function squareDigits(num){
+  let numString = num.toString();
+  let arrNum = numString.split('');
+  let squaredArr = [];
+  for (let i = 0; i < arrNum.length; i++){
+    squaredArr.push(arrNum[i] ** 2);
+  } 
+  return parseInt(squaredArr.join(''))
+}
