@@ -86,3 +86,12 @@ function alphabetPosition(text) {
   }
   return alphNum.join(' ');
 }
+
+//Directions Reduction
+//https://www.codewars.com/kata/550f22f4d758534c1100025a/
+//Solution:
+
+function dirReduc(arr){
+  const opposites = {"NORTH": "SOUTH", "EAST": "WEST", "SOUTH": "NORTH", "WEST": "EAST"}
+  return arr.reduce((acc, val) => (opposites[acc.slice(-1)] === val ? acc.pop() : acc.push(val), acc), [])
+}
