@@ -71,3 +71,18 @@ function bouncingBall(h,  bounce,  window) {
     return -1;
   }
 }
+
+//Replace with Alphabet Position (without  REGEX)
+//https://www.codewars.com/kata/546f922b54af40e1e90001da/
+//Solution:
+
+function alphabetPosition(text) {
+  let lowText = text.toLowerCase().split('')
+  let alphNum = [];
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  for (let i = 0; i < lowText.length; i++) {
+    let j = alphabet.indexOf(lowText[i]) + 1;
+    if (j) alphNum.push(j);
+  }
+  return alphNum.join(' ');
+}
