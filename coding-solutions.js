@@ -140,3 +140,11 @@ function findHumanCatDogYears(humanYears){
   let dogYears = 15 + (humanYears > 1 ? 9 : 0) + (humanYears > 2 ? 5*(humanYears-2) : 0);
   return [humanYears, catYears, dogYears];
 }
+
+//In this kata, the toFreud() function will take a string as its argument, and return a string with every word replaced by the explanation to everything, according to Freud. Note that an empty string, or no arguments, should result in the ouput being ""(empty string).
+
+function toFreud(str){
+  arr= str.split(' ')
+  arr.forEach((name, index) => arr[index] = 'sex');
+  return newStr=arr.join(' ')
+}
