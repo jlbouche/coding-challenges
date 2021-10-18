@@ -162,3 +162,9 @@ function toFreud(str){
 function enough(cap, on, wait) {
   return (cap-on >= wait) ? 0 : (on + wait) - cap;  
 }
+
+//Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+function invert(array) {
+  return array.map( x => x === 0 ? x : -x);
+}
