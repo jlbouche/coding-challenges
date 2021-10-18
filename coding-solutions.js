@@ -168,3 +168,11 @@ function enough(cap, on, wait) {
 function invert(array) {
   return array.map( x => x === 0 ? x : -x);
 }
+
+//You get an array of numbers, return the sum of all of the positives ones.
+
+function positiveSum(arr) {
+  let sum=0;
+  arr.map(x => (x > 0) ? sum = sum+x : 0)
+  return sum;
+}
