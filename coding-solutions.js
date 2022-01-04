@@ -229,3 +229,25 @@ function likes(names) {
     default: return names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this';
   }
 }
+
+// Given an input of an array of digits, return the array with each digit incremented by its position in the array: the first digit will be incremented by 1, the second digit by 2, etc. Your result can only contain single digit numbers, so if adding a digit with its position gives you a multiple-digit number, only the last digit of the number should be returned.
+
+//submitted
+
+function incrementer(nums) {
+  let newNums = [] 
+  nums.map(function(num, idx) {
+    if (num+ (idx+1) < 10) {
+      newNums.push(num + (idx+1))
+    } else {
+      newNums.push((num + (idx +1)) % 10)
+    }
+  })
+  return newNums;
+}
+
+//preferred
+
+function incrementer(num) { 
+  return num.map((n,i) => (n+i+1)%10);
+}
