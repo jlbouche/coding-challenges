@@ -264,3 +264,22 @@ function finalGrade (exam, projects) {
   return (exam > 90 || projects > 10) ? 100 : (exam > 75 && projects >=5) ? 90 : (exam > 50 && projects >=2) ? 75 : 0
 }
 
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+
+// You can assume all values in the array are numbers.
+
+//submitted
+
+function smallEnough(arr, limit){
+  let maxReached = []
+  arr.map(function(val, idx){
+    return (val > limit) ? maxReached.push(val): 0;
+  })
+  return (maxReached.length > 0) ? false: true;
+}
+
+//preferred
+
+function smallEnough(a, limit){
+  return Math.max(...a) <= limit
+}
