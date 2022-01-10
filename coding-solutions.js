@@ -291,3 +291,15 @@ function smallEnough(a, limit){
 function duplicateElements(m, n) {
   return m.some(val => n.includes(val))
 }
+
+// For every good kata idea there seem to be quite a few bad ones!
+
+// In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+
+function well(x){
+  let goodArr = []
+  x.map(function(val, idx){
+    return (val === 'good') ? goodArr.push(val) : null;
+  })
+  return (goodArr.length > 2) ? 'I smell a series!' : (goodArr.length > 0) ? 'Publish!' : 'Fail!'
+}
