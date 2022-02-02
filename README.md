@@ -1,2 +1,2 @@
 # coding-challenges
-Solutions to coding challenges found on sites like codewars
+Solutions to coding challenges found on codewars

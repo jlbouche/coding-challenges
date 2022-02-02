@@ -303,3 +303,18 @@ function well(x){
   })
   return (goodArr.length > 2) ? 'I smell a series!' : (goodArr.length > 0) ? 'Publish!' : 'Fail!'
 }
+
+// function getCount(str){
+//   const vowels = ["a", "e", "i", "o", "u"]
+//   let vowelCount = 0;
+//   for (let i = 0; i < str.length; i++){
+//     if (vowels.includes(str.charAt(i))){
+//       vowelCount++;
+//     }
+//   }
+//   return vowelCount;
+// }
+
+function getCount(str){
+  return (str.includes('a' || 'e' || 'i' || 'o' || 'u')) ? str.match(/[aeiou]/g).length : 0;
+}
