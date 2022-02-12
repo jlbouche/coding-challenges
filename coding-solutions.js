@@ -318,3 +318,26 @@ function well(x){
 function getCount(str){
   return (str.includes('a' || 'e' || 'i' || 'o' || 'u')) ? str.match(/[aeiou]/g).length : 0;
 }
+
+// Given a string of words, you need to find the highest scoring word.
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+// You need to return the highest scoring word as a string.
+// If two words score the same, return the word that appears earliest in the original string.
+// All letters will be lowercase and all inputs will be valid.
+
+function high(str){
+  let strArr = str.split(' ');
+  let highestScore = 0;
+  let bestWord = 0;
+  for (let i = 0; i < strArr.length; i++){
+    let wordScore = 0;
+    for (let j = 0; j < strArr[i].length; j++){
+      wordScore += (strArr[i][j].charCodeAt()-96)
+    }
+    if (wordScore > highestScore){
+      highestScore = wordScore
+      bestWord = i;
+    }
+  }
+  return strArr[bestWord]
+}
