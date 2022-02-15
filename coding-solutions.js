@@ -361,3 +361,18 @@ function comp(arr1, arr2){
     return arr1.reduce((prevVal, currVal) => prevVal+currVal, 1) === arr2.reduce((prevVal, currVal) => prevVal + Math.sqrt(currVal), 1)
   }
 }
+
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+function persistence(num) {
+  let count=0;
+  num = num.toString()
+  let numArr=num.split('')
+  while (numArr.length > 1){
+    num = numArr.reduce((prevVal, currVal) => (prevVal * currVal))
+    num = num.toString()
+    numArr=num.split('')
+    count++;
+  }
+    return count;
+}
