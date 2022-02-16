@@ -399,3 +399,22 @@ function getSum( a,b ){
   let max = Math.max(a, b);
   return a===b ? a : ((max-min)+1) * (min + max) / 2
 }
+
+//Given a number, say prod (for product), we search two Fibonacci numbers F(n) and F(n+1) verifying F(n)*F(n+1)=prod and return an array [F(n), F(n+1), true]
+// You are asked to find 2 numbers in the fibonacci sequence f(n) and f(n+1) which product is greater or equals to the number given.
+// You must return it as a array/tuple/what ever like this: (fn(n), fn(n+1), eq) while eq is a boolean that indicates if the product is equals with the number given.
+
+function productFib(prod){
+  let firstFib = 0;
+  let secondFib = 1;
+  while (prod > firstFib * secondFib){
+    let prevFirstFib = firstFib;
+    firstFib =  secondFib;
+    secondFib = prevFirstFib + secondFib;
+  }
+    if (prod === firstFib*secondFib){
+    return [firstFib, secondFib, true]
+  } else {
+    return [firstFib, secondFib, false]
+  }
+}
