@@ -418,3 +418,18 @@ function productFib(prod){
     return [firstFib, secondFib, false]
   }
 }
+
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+function duplicateCount(text){
+  let count = 0;
+  const strArr = text.toLowerCase().split("").sort().join("").match(/(.)\1+/g);
+  if (strArr===null){
+      return 0;
+    } else {
+      strArr.forEach((elem) => {
+        count++
+      })
+      return count;
+    }
+}
