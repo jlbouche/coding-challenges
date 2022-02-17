@@ -433,3 +433,25 @@ function duplicateCount(text){
       return count;
     }
 }
+
+// Build Tower by the following given argument:
+// number of floors (integer and always greater than 0).
+// Tower block is represented as *
+//   for example, a tower of 3 floors looks like below
+
+// [
+//   '  *  ', 
+//   ' *** ', 
+//   '*****'
+// ]
+
+function towerBuilder(nFloors) {
+  let star = '*';
+  let space = ' ';
+  let nFloorsArr = Array.from({length: nFloors}, (_, i) => i + 1)
+  let newArr = []
+  nFloorsArr.forEach((elem) => {
+    newArr.push(`${space.repeat(nFloors-elem)}${star.repeat(elem*2-1)}${space.repeat(nFloors-elem)}`)
+  })
+  return newArr;
+}
