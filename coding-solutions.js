@@ -455,3 +455,10 @@ function towerBuilder(nFloors) {
   })
   return newArr;
 }
+
+//sum without highest and lowest # of array
+
+function sumArray(array) {
+  return (!array || array.length<=2) ? 0 :  array.sort((a,b) => a-b).slice(1,-1).reduce((a,b) => a+b)
+}
+
