@@ -533,3 +533,12 @@ return arr;
 function minMax(arr){
   return [Math.min(...arr), Math.max(...arr)]
 }
+
+//Given an array of numbers and an index, return the index of the least number larger than the element at the given index, or -1 if there is no such index ( or, where applicable, Nothing or a similarly empty value ).
+
+function leastLarger(arr,idx) {
+  let targetVal = arr[idx]
+  let largerNums = arr.filter(num => num > targetVal)
+  let leastLarger = Math.min(...largerNums)
+  return arr.findIndex(num => num === leastLarger)
+}
