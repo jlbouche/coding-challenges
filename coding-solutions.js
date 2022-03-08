@@ -527,3 +527,9 @@ var fizzBuzz = function(n) {
   }
 return arr;
 };
+
+//find smallest and largest numbers in array
+
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
