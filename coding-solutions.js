@@ -548,3 +548,9 @@ function leastLarger(arr,idx) {
 function oddCount(n){
   return Math.floor(n/2)
 }
+
+//Given a list of integers, return the digits that are not present in any of them.
+
+function unusedDigits(...args){
+  return "0123456789".replace(new RegExp('['+args.join('')+']','g'), '')
+}
