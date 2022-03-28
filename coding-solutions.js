@@ -554,3 +554,10 @@ function oddCount(n){
 function unusedDigits(...args){
   return "0123456789".replace(new RegExp('['+args.join('')+']','g'), '')
 }
+
+//Define a method/function that removes from a given array of integers all the values contained in a second array.
+
+Array.prototype.remove_ = function(integer_list, values_list){
+  let newArray = integer_list.filter(elem => !values_list.includes(elem))
+  return newArray;
+}
