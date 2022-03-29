@@ -561,3 +561,12 @@ Array.prototype.remove_ = function(integer_list, values_list){
   let newArray = integer_list.filter(elem => !values_list.includes(elem))
   return newArray;
 }
+
+//double or nothing calculate final cash left
+
+function doubleOrNothing(cash, wager, losses){
+  for (let i = 0; i < losses-1; i++){
+    wager = wager*2
+  }
+  return cash >= wager ? cash - wager : "I'll pay you back later"
+}
